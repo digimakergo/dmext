@@ -1,4 +1,4 @@
-module dmext
+module github.com/digimakergo/dmext
 
 go 1.16
 

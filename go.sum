@@ -60,8 +60,6 @@ github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsr
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/digimakergo/digimaker v0.1.0-beta.3 h1:Zr+SJ/JRKJno4B0lWLKWqhv6lMgJwiOMq++Wqeo8B8o=
-github.com/digimakergo/digimaker v0.1.0-beta.3/go.mod h1:OTA+Adbz4dwdJb0xuR9zWRIYESxK+Vo+7jSIs+flAWY=
 github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220104160459-ccb09aad0e52 h1:vIyZgGIbA+ROkt5EF3W5Nn84Ok19eEnuHwl23rQz6fA=
 github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220104160459-ccb09aad0e52/go.mod h1:OTA+Adbz4dwdJb0xuR9zWRIYESxK+Vo+7jSIs+flAWY=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
