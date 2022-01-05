@@ -5,7 +5,6 @@
 package mail
 
 import (
-	"bytes"
 	"crypto/tls"
 	"errors"
 	"fmt"
@@ -14,6 +13,7 @@ import (
 
 	"github.com/digimakergo/digimaker/core/log"
 	"github.com/digimakergo/digimaker/core/util"
+	"github.com/jordan-wright/email"
 )
 
 type loginAuth struct {
@@ -48,7 +48,15 @@ func SendMail(mail util.MailMessage) error {
 	password := util.GetConfig("general", "mail_password")
 	host, _, _ := net.SplitHostPort(hostPort)
 
-	to := mail.To
+	message := email.NewEmail()
+
+	message.To = mail.To
+	message.From = from
+	message.Subject = mail.Subject
+	message.HTML = []byte(mail.Body)
+	for _, attachment := range mail.Attachments {
+		message.AttachFile(util.VarFolder() + "/" + attachment)
+	}
 
 	conn, err := net.Dial("tcp", hostPort)
 	if err != nil {
@@ -74,13 +82,7 @@ func SendMail(mail util.MailMessage) error {
 		return err
 	}
 
-	var body bytes.Buffer
-
-	mimeHeaders := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\r\n"
-	body.Write([]byte(fmt.Sprintf("Subject: "+mail.Subject+"\n%s\r\n", mimeHeaders)))
-	body.Write([]byte(mail.Body))
-
-	err = smtp.SendMail(hostPort, auth, from, to, body.Bytes())
+	err = message.Send(hostPort, auth)
 	if err != nil {
 		return err
 	}
