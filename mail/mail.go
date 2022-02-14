@@ -52,6 +52,9 @@ func SendMail(mail util.MailMessage) error {
 
 	message.To = mail.To
 	message.From = from
+	if len(mail.Bcc) > 0 {
+		message.Bcc = mail.Bcc
+	}
 	message.Subject = mail.Subject
 	message.HTML = []byte(mail.Body)
 	for _, attachment := range mail.Attachments {
