@@ -11,9 +11,11 @@ import (
 	"net"
 	"net/smtp"
 
+	"github.com/digimakergo/digimaker/core/config"
 	"github.com/digimakergo/digimaker/core/log"
 	"github.com/digimakergo/digimaker/core/util"
 	"github.com/jordan-wright/email"
+	"github.com/spf13/viper"
 )
 
 type loginAuth struct {
@@ -43,9 +45,9 @@ func (a *loginAuth) Next(fromServer []byte, more bool) ([]byte, error) {
 }
 
 func SendMail(mail util.MailMessage) error {
-	from := util.GetConfig("general", "send_from")
-	hostPort := util.GetConfig("general", "mail_host")
-	password := util.GetConfig("general", "mail_password")
+	from := viper.GetString("general/send_from")
+	hostPort := viper.GetString("general/mail_host")
+	password := viper.GetString("general/mail_password")
 	host, _, _ := net.SplitHostPort(hostPort)
 
 	message := email.NewEmail()
@@ -58,7 +60,7 @@ func SendMail(mail util.MailMessage) error {
 	message.Subject = mail.Subject
 	message.HTML = []byte(mail.Body)
 	for _, attachment := range mail.Attachments {
-		message.AttachFile(util.VarFolder() + "/" + attachment)
+		message.AttachFile(config.VarFolder() + "/" + attachment)
 	}
 
 	conn, err := net.Dial("tcp", hostPort)

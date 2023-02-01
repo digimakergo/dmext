@@ -66,6 +66,8 @@ github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220105095642-a2000c6c56c8 h1:
 github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220105095642-a2000c6c56c8/go.mod h1:OTA+Adbz4dwdJb0xuR9zWRIYESxK+Vo+7jSIs+flAWY=
 github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220105145904-71bd2199e51c h1:1/1T1zr51vXDv2jvBlGiIQJ7NLsTy7o0Q2YOVo2/6go=
 github.com/digimakergo/digimaker v0.1.0-beta.3.0.20220105145904-71bd2199e51c/go.mod h1:OTA+Adbz4dwdJb0xuR9zWRIYESxK+Vo+7jSIs+flAWY=
+github.com/digimakergo/digimaker v0.1.1-beta.1.0.20230111103517-ec3bbe2013a0 h1:ScDI7h33TLTrrHdF63sXzRSR8N+padyJ8kFIkUpbUYA=
+github.com/digimakergo/digimaker v0.1.1-beta.1.0.20230111103517-ec3bbe2013a0/go.mod h1:V2ytwiePpohy3B5p6J80qTSztyeAI/xKAVszy9uwvwU=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
@@ -153,6 +155,7 @@ github.com/googleapis/gax-go/v2 v2.0.5/go.mod h1:DWXyrwAJ9X0FpwwEdw+IPEYBICEFu5m
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1 h1:EGx4pi6eqNxGaHF6qqu48+N2wcFQ5qg5FXgOdqsJ5d8=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
+github.com/graphql-go/graphql v0.8.0/go.mod h1:nKiHzRM0qopJEwCITUuIsxk9PlVlwIiiI8pnJEhordQ=
 github.com/grpc-ecosystem/grpc-gateway v1.16.0/go.mod h1:BDjrQk3hbvj6Nolgz8mAMFbcEtjT1g+wF4CSlocrBnw=
 github.com/hashicorp/consul/api v1.1.0/go.mod h1:VmuI/Lkw1nC05EYQWNKwWGbkg+FbDBtguAZLlVdkD9Q=
 github.com/hashicorp/consul/sdk v0.1.1/go.mod h1:VKf9jXwCTEY1QZP2MOLRhb5i/I/ssyNV1vwHyQBF0x8=
