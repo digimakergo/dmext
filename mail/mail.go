@@ -45,9 +45,9 @@ func (a *loginAuth) Next(fromServer []byte, more bool) ([]byte, error) {
 }
 
 func SendMail(mail util.MailMessage) error {
-	from := viper.GetString("general/send_from")
-	hostPort := viper.GetString("general/mail_host")
-	password := viper.GetString("general/mail_password")
+	from := viper.GetString("General.send_from")
+	hostPort := viper.GetString("General.mail_host")
+	password := viper.GetString("general.mail_password")
 	host, _, _ := net.SplitHostPort(hostPort)
 
 	message := email.NewEmail()
